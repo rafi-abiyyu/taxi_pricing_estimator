@@ -13,9 +13,7 @@ st.write("Predict taxi fares based on trip details.")
 
 st.subheader("Enter Trip Details")
 
-# ============================
-# User Inputs
-# ============================
+
 trip_distance = st.number_input(
     "Trip Distance (km)",
     min_value=0.1,
@@ -53,17 +51,17 @@ input_df = pd.DataFrame({
 
 if st.button("Predict Fare"):
 
-    # First predict (not shown yet)
+    
     predicted_fare = model.predict(input_df)[0]
 
-    # Reject inputs beyond reliable model range
+    
     if predicted_fare > 160:
         st.error(
             f" Oops — looks like your destination is  out of reach. "
         )
         st.stop()
 
-    # If valid → continue normally
+    
     MAPE = 0.30  # your model's error level
 
     lower_bound = predicted_fare * (1 - MAPE)
@@ -76,3 +74,4 @@ if st.button("Predict Fare"):
         f"This range reflects the model’s average error on test data (~30% MAPE). "
         f"Real fares may vary due to route selection, traffic conditions, and other external factors."
     )
+
