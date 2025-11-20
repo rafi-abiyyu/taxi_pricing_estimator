@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+scikit-learn
+category_encoders
+shap
+xgboost
+lightgbm
+catboost
+matplotlib
+seaborn
+statsmodels
