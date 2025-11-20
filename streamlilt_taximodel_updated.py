@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-data="taxi_pricing_model_for_streamlit.pkl"
+data = "taxi_pricing_model_for_streamlit.pkl"
 with open(data, "rb") as f:
     model = pickle.load(f)
 
@@ -13,9 +13,12 @@ st.write("Predict taxi fares based on trip details.")
 
 st.subheader("Enter Trip Details")
 
+# ============================
+# User Inputs
+# ============================
 trip_distance = st.number_input(
-    "Trip Distance (km)", 
-    min_value=0.1, 
+    "Trip Distance (km)",
+    min_value=0.1,
     step=0.1,
     format="%.2f"
 )
@@ -50,17 +53,22 @@ input_df = pd.DataFrame({
 
 if st.button("Predict Fare"):
 
-    # Main prediction
+    # First predict (not shown yet)
     predicted_fare = model.predict(input_df)[0]
 
-    
-    MAPE = 0.30
+    # Reject inputs beyond reliable model range
+    if predicted_fare > 160:
+        st.error(
+            f" Oops — looks like your destination is  out of reach. "
+        )
+        st.stop()
 
-    
+    # If valid → continue normally
+    MAPE = 0.30  # your model's error level
+
     lower_bound = predicted_fare * (1 - MAPE)
     upper_bound = predicted_fare * (1 + MAPE)
 
-    
     st.success(f"Estimated Fare: **${predicted_fare:.2f}**")
 
     st.info(
