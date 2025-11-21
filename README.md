@@ -4,18 +4,20 @@ The business problem addressed in this portfolio is to develop a reliable taxi f
 ---
 
 ### **Objectives**
-The objective of this project is to build a machine learning model capable of predicting taxi fares based on key trip features such as distance, duration, time of day, traffic, and weather. The model will then be deployed through a Streamlit application to allow users to generate fare estimates instantly. Beyond prediction, the project also aims to identify the most influential factors behind pricing, helping the company refine fare policies and enhance strategic decision-making.
+- The objective of this project is to build a machine learning model capable of predicting taxi fares based on key trip features such as distance, duration, time of day, traffic, and weather. 
+- The model will then be deployed through a Streamlit application to allow users to generate fare estimates instantly.
+- Beyond prediction, the project also aims to identify the most influential factors behind pricing, helping the company refine fare policies and enhance strategic decision-making.
 
 ---
 
 ### **Metric Evaluation**
 Model performance is evaluated using three core regression metrics:
 
-**MAE (Mean Absolute Error)** measures the average absolute difference between predicted fares and actual fares, providing a direct sense of how “off” each prediction is in currency terms.
+- **MAE (Mean Absolute Error)** measures the average absolute difference between predicted fares and actual fares, providing a direct sense of how “off” each prediction is in currency terms.
 
-**RMSE (Root Mean Squared Error)** penalizes larger errors more heavily, ensuring the model remains reliable even in extreme or unusual cases.
+- **RMSE (Root Mean Squared Error)** penalizes larger errors more heavily, ensuring the model remains reliable even in extreme or unusual cases.
 
-**MAPE (Mean Absolute Percentage Error)** expresses prediction error as a percentage, making it easier for the company to understand model accuracy relative to trip cost levels.
+- **MAPE (Mean Absolute Percentage Error)** expresses prediction error as a percentage, making it easier for the company to understand model accuracy relative to trip cost levels.
 
 Together, these metrics give a balanced view of both practical and statistical performance, ensuring the model is accurate enough for customer-facing deployment.
 
