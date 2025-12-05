@@ -109,4 +109,8 @@ The goal of this project is to build a reliable and transparent taxi fare predic
 
 #### **Business Recommendations:**
 1. **Re-evaluate the Current Pricing Strategy**: By SHAP analysis, we know that the pricing formula is rigid (highly dependent on duration dan distance) and not capture the real trip complexity. The business should evaluate whether relying solely on these four variables is still relevant, especially when other companies increasingly incorporate more contextual pricing.  
-2. **Implement Dynamic Pricing Models**: Consider adopting dynamic pricing strategies that adjust fares based on real-time factors such as demand, traffic conditions, and weather. This approach can help optimize revenue while providing fair pricing to customers during peak times or adverse conditions.  
+2. **Implement Dynamic Pricing Models**: Consider adopting dynamic pricing strategies that adjust fares based on real-time factors such as demand, traffic conditions, and weather. This approach can help optimize revenue while providing fair pricing to customers during peak times or adverse conditions.
+
+---
+#### **Streamlit LInk:**
+https://taxipricerafianov.streamlit.app/
